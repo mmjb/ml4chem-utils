@@ -1,0 +1,15 @@
+name: ml4chem
+channels:
+  - defaults
+  - rdkit
+  - pytorch
+dependencies:
+  - python==3.7.10
+  - pip<20.3
+  - rdkit==2020.09.1.0
+  - tensorflow-gpu==2.4.1
+  - typing-extensions
+  - pytorch=1.8.1=py3.7_cuda10.1_cudnn7.6.3_0
+  - pip:
+    - tf2-gnn
+    - https://pytorch-geometric.com/whl/torch-1.8.0+cu101/torch_scatter-2.0.6-cp37-cp37m-linux_x86_64.whl
