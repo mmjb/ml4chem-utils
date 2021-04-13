@@ -5,7 +5,7 @@ channels:
   - pytorch
 dependencies:
   - python==3.7.10
-  - pip<20.3
+  - pip=20.1.1  # See https://github.com/Azure/MachineLearningNotebooks/issues/1110 - using this specific pip works around ruamel.yaml not found error.
   - rdkit==2020.09.1.0
   - tensorflow-gpu==2.4.1
   - typing-extensions
@@ -13,7 +13,4 @@ dependencies:
   - pip:
     - tf2-gnn
     - https://pytorch-geometric.com/whl/torch-1.8.0+cu101/torch_scatter-2.0.6-cp37-cp37m-linux_x86_64.whl
-    # Things required to use this env in AzureML:
-    - azureml-core
-    - azureml-dataprep
-    - azureml-sdk
+    - azureml-sdk  # To use the container in AML jobs
