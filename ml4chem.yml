@@ -8,6 +8,7 @@ dependencies:
   - pip=20.1.1  # See https://github.com/Azure/MachineLearningNotebooks/issues/1110 - using this specific pip works around ruamel.yaml not found error.
   - rdkit==2020.09.1.0
   - scikit-learn
+  - numpy==1.19.2  # np >= 1.20 breaks TF2 (-GNN)
   - tensorflow-gpu==2.4.1
   - typing-extensions
   - pytorch=1.8.1=py3.7_cuda10.1_cudnn7.6.3_0
